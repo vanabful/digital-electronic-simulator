@@ -1,0 +1,85 @@
+body {
+    margin:0;
+}
+
+.background {
+    background-image: url("../images/hiking.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.background-cover {
+    height:100vh;
+    
+    /* 0.6 ti je prozirnost crne boje i samo njega podesavas koliko da ti bude efekt */
+    background-color: rgba(255, 255, 255, 0.1);
+    
+    /* ovo ti je kruzni hover... ima tri sloja, prvi rgba je centar itd.. 
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.2),rgba(0, 0, 0,0.7));*/
+    
+    /* Ovo ti je ko oces dodat neki tekst na sliku da ti bude uvik centrirano */
+    display:flex;
+    
+}
+
+nav{
+    
+}
+
+.background-cover h1 {
+    color:#fff;
+    text-transform: uppercase;
+    font-family: 'Calibri', sans-serif;
+    font-size:2.5em;
+    text-shadow: 2px 2px 2px #000;
+    margin:0;
+}
+
+.box h3 {
+    color:#eee;
+    text-transform: uppercase;
+    font-family: 'Calibri', sans-serif;
+    font-size:1.5em;
+    text-shadow: 2px 2px 2px #000;
+    margin:0;
+    
+}
+
+.background-cover button {
+	background-color: #ffcc33;
+    text-transform: uppercase;
+	padding: 8px 17px;
+	border: none;
+	border-radius: 10px;
+	margin-top: 2rem;
+}
+
+.background-cover button a{
+	font-family: 'Calibri', sans-serif;
+	font-size:1.5em;
+	color: black;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.background-cover button:hover{
+	cursor: pointer;
+	border: 2px solid #ffcc33;
+	background-color: transparent;
+	transition: 0.5s;
+}
+
+.background-cover button a:hover{
+	cursor: pointer;
+	color: #eee;
+	transition: 0.5s;
+}
+
+.box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color:rgba(0,0,0,0.7);
+	padding: 5px 14px;
+}

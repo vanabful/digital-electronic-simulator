@@ -1,0 +1,1139 @@
+
+body{
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	min-height: 100vh;
+	width: 100%;
+}
+
+/*-------- MENU-izbornik di ide odabir bistabila, ni vrata, nili vrata, itd --------*/
+#menu{
+	width: 100%;
+	background-color: #f9f7f4;
+	padding: 7px 0;
+	position: relative;
+}
+
+
+#menu > nav{
+	display: flex;
+	justify-content: flex-end;
+	height: 100%;
+	width: 100%;
+}
+
+.menu-choice{
+	height: 100%;
+	width: 15%;
+	text-align: center;
+}
+
+.menu-choice > a{
+	text-decoration: none;
+	color: #4a4a4a;
+	font-family: Montserrat;
+	font-size: 90%;
+}
+/*----------------- sve desno od menu, ostali dio  ----------------------- */
+
+#main-part{
+	display: flex;
+	width: 100%;
+	max-height: 100vh;
+	border-top: 1px solid #eee;
+	margin-top: 0.2rem;
+	
+}
+
+/*----------------- elementi koji se drag i dropaju ----------------------*/
+
+#redovi-divova{
+	display: flex;
+	flex-direction: column;
+	width: 17vw;
+	background-color: white;
+	min-height: 100vh;
+}
+
+.tekst{
+	width: 100%;
+	height: 15%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tekst label{
+	font-family: Montserrat;
+	font-weight: 600;
+	color: #202628;
+}
+
+.demux-slika{
+	width: 100%;
+	height: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dragDrop{
+	width: 100%;
+	height: 50%;
+}
+
+.dragDrop img{
+	width: 90%;
+	height: 70%;
+}
+
+.izbor1{
+	background-color: white;
+	width: 80%;
+	height:30px;
+	display: flex;
+	border: 0.5px solid #e6e6e6;
+	border-left: 7px solid #ffcc33;
+	border-right: none;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11px;
+	align-items: center;
+	justify-content: center;
+}
+
+.izbor1 label{
+	color: #4a4a4a;
+}
+
+.help{
+	width: 100%;
+	height: 5%;
+	border-bottom: 0.5px solid #e6e6e6;
+	padding: 3px 0 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.help > a{
+	font-family: Montserrat;
+	color: #3e8bb9;
+	font-size: 15px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.blokovi{
+	display: flex;
+	flex-wrap: wrap;
+	height: 45%;
+	width: 100%;
+	background-color:white;
+	border-bottom: 0.5px solid #e6e6e6;
+	align-content: flex-start;
+}
+
+.izbori{
+	min-height: 40%;
+	width: 100%;
+	text-align: center;
+}
+
+.selected{
+	background-color: #efebe3 !important;
+	border-left: 7px solid #3e8bb9 !important;
+}
+
+.izbor{
+	width: 100%;
+	height:30px;
+	display: flex;
+	border-bottom: 0.5px solid #e6e6e6;
+	border-left: 7px solid #ffcc33;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11px;
+	justify-content: center;
+	align-items: center;
+}
+
+.izbor:hover{
+	border-left: 7px solid #3e8bb9;
+}
+
+.log, .extra-v1, .extra-v2, .extra-v3, .extra-v4{
+	border-left: 7px solid #3e8bb9;
+}
+
+.dropdown-icon{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+
+.dropdown{
+	display: none;
+	background-color: #fffefc;
+}
+
+.izbor:hover{
+	background-color: #efebe3;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.izbor label{
+	padding: 8px 5px;
+	color: #4a4a4a;
+}
+
+.izbor label:hover{
+	cursor: pointer;
+}
+
+.block{
+	width: 86px;
+	background-color: white;
+	position: relative;
+	display: flex;
+	height: 80px;
+	background-image: url("../images/ni.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0;
+	overflow: visible;
+	position: relative;
+	margin-left: 0.1rem;
+}
+
+/* ------------- MUX ----------------------*/
+
+.multiplekser{
+	height: 160px;
+	width: 140px;
+	background-image: url("../images/multiplekser-1.png");
+	background-size: cover;
+	flex-direction: column;
+	margin-top: 0.5rem;
+}
+
+.right-endpoints{
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+}
+
+.mux-output-input{
+	display: flex;
+	height: 90%;
+	width: 100%;
+}
+
+.mux-right{
+	margin-left: 2rem;
+    margin-top: 4.35rem;
+}
+
+.bottom-endpoints{
+	display: flex;
+	height: 10%;
+	width: 100%;
+}
+
+.first{
+	margin-left: 4.2rem;
+	margin-top: 0.35rem
+}
+
+.mux-top{
+	margin-top: 2.55rem;
+}
+
+.mux-bottom{
+	margin-top: 2.5rem;
+}
+
+/* ------------- ----- --------------------*/
+
+/*---------- MUX S 2 ADRESNA ULAZA ---------*/
+
+.multiplekser-2{
+	height: 160px;
+	width: 140px;
+	background-image: url("../images/multiplekser-2.png");
+	background-size: cover;
+	flex-direction: column;
+	margin-top: 0.5rem;
+}
+
+.mux2-top{
+	margin-top: 1.45rem;
+}
+
+.mux2-middle{
+	margin-top: 1.1rem;
+}
+
+.mux2-bottom{
+	margin-top: 0.9rem;
+}
+
+.mux2-first{
+	margin-left: 2.65rem;
+    margin-top: 0.3rem;
+}
+
+.mux2-second{
+	margin-left: 2.35rem;
+    margin-top: 0.3rem;
+}
+/* ------------- ----- --------------------*/
+
+/*---------- MUX S 3 ADRESNA ULAZA ---------*/
+
+.multiplekser-3{
+	height: 160px;
+	width: 140px;
+	background-image: url("../images/multiplekser-3.png");
+	background-size: cover;
+	flex-direction: column;
+	margin-top: 0.5rem;
+}
+
+.mux3-top{
+	margin-top: 0.5rem;
+}
+
+.mux3-middle{
+	margin-top: 0.4rem;
+}
+
+.mux3-bottom{
+	margin-top: 0.5rem;
+}
+
+.mux3-right{
+	margin-left: 2rem;
+    margin-top: 4.35rem;
+}
+
+.mux3-first{
+	margin-left: 2.7rem;
+    margin-top: 0.35rem;
+}
+
+.mux3-second{
+	margin-left: 0.9rem;
+    margin-top: 0.35rem;
+}
+
+.mux3-third{
+	margin-left: 0.8rem;
+    margin-top: 0.35rem;
+}
+
+/* ------------- ----- --------------------*/
+
+/* ------------- DEMUX --------------------*/
+
+.demultiplekser{
+	height: 220px;
+	width: 200px;
+	background-image: url("../images/demultiplekser-1.png");
+	background-size: cover;
+	flex-direction: column;
+	margin-top: 0.5rem;
+}
+
+.demux-output-input{
+	display: flex;
+	height: 90%;
+	width: 100%;
+}
+
+.demux-first{
+	margin-left: 5.35rem;
+	margin-top: 0rem;
+}
+
+.demux-one-output{
+	margin-left: 4.6rem;
+	margin-top: 0.5rem;
+}
+
+.demux-top{
+	margin-top: 4.2rem;
+    margin-left: 10.5rem;
+}
+
+.demux-bottom{
+	margin-top: 2.65rem;
+    margin-left: 10.5rem;
+}
+
+/* ------------- ----- --------------------*/
+
+/*-------- DEMUX S 2 ADRESNA ULAZA ---------*/
+
+.demultiplekser-2{
+	height: 220px;
+	width: 200px;
+	background-image: url("../images/demultiplekser-2.png");
+	background-size: cover;
+	flex-direction: column;
+	margin-top: 0.5rem;
+}
+
+.demux2-first{
+	margin-left: 3.5rem;
+	margin-top: -0.5rem;
+}
+
+.demux2-second{
+	margin-left: 2.5rem;
+	margin-top: -0.5rem;
+}
+
+.demux-two-output{
+	margin-left: 3.1rem;
+	margin-top: 0.2rem;
+}
+
+.demux2-top{
+	margin-top: 2.6rem;
+    margin-left: 10.3rem;
+}
+
+.demux2-middle{
+	margin-left: 10.3rem;
+    margin-top: 1.15rem;
+}
+
+.demux2-bottom{
+    margin-left: 10.3rem;
+	margin-top: 0.9rem;
+}
+/* ------------- ----- --------------------*/
+
+/*-------- DEMUX S 3 ADRESNA ULAZA ---------*/
+
+.demultiplekser-3{
+	height: 220px;
+	width: 200px;
+	background-image: url("../images/demultiplekser-3.png");
+	background-size: cover;
+	flex-direction: column;
+	margin-top: 0.5rem;
+}
+
+.demux-three-output{
+	margin-left: 3rem;
+	margin-top: 0.6rem;
+}
+
+.demux3-first{
+	margin-left: 3.4rem;
+	margin-top: 0rem;
+}
+
+.demux3-second{
+	margin-left: 1rem;
+	margin-top: 0rem;
+}
+
+.demux3-third{
+	margin-left: 0.9rem;
+	margin-top: 0rem;
+}
+
+.demux3-top{
+	margin-top: 2.1rem;
+    margin-left: 10.1rem;
+}
+
+.demux3-middle{
+	margin-left: 10.1rem;
+    margin-top: 0.35rem;
+}
+
+.middle-2{
+	margin-top: 0.3rem;
+}
+
+.middle-4{
+	margin-top: 0.4rem;
+}
+
+.middle-5{
+	margin-top: 0.3rem;
+}
+
+.middle-6{
+	margin-top: 0.4rem;
+}
+
+.demux3-bottom{
+    margin-left: 10.1rem;
+	margin-top: 0.4rem;
+}
+
+/* ------------- ----- --------------------*/
+
+/*------------- INVERTOR ------------------*/
+
+.invertor{
+	height: 80px;
+	width: 90px;
+	background-image: url("../images/not.png");
+}
+
+.extra-left-endpoint{
+	margin-top: 2.1rem;
+    margin-left: 0.3rem;
+}
+
+.extra-right-endpoint{
+	margin-top: 2.1rem;
+    margin-left: 3.7rem;
+}
+
+/*------------- POJACALO ------------------*/
+
+.pojacalo{
+	height: 80px;
+	width: 90px;
+	background-image: url("../images/pojacalo.png");
+}
+
+.extraPojacalo-right-endpoint{
+	margin-top: 2.1rem;
+	margin-left: 3.2rem;
+}
+
+/* ------------- ----- --------------------*/
+
+/* ------------- ----- --------------------*/
+
+.ni-3{
+	background-image: url("../images/nand-3.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	
+}
+
+.ni-4{
+	background-image: url("../images/nand-4.png");
+}
+
+.ni-5{
+	background-image: url("../images/nand-5.png");
+}
+
+.ni-6{
+	background-image: url("../images/nand-6.png");
+}
+
+.nor{
+	background-image: url("../images/nor.png");
+}
+
+.nor-3{
+	background-image: url("../images/nor-3.png");
+}
+
+.nor-4{
+	background-image: url("../images/nor-4.png");
+}
+
+.nor-5{
+	background-image: url("../images/nor-5.png");
+}
+
+.nor-6{
+	background-image: url("../images/nor-6.png");
+}
+
+.delete-button{
+	position: absolute;
+	right: -0.3rem;
+	top: -0.4rem;
+	color: #f9903b;
+	cursor: pointer;
+	display: none;
+}
+
+.block:hover{
+	background-color: #f9f7f4;
+	transition: 0.5s;
+}
+
+
+.ni-endpoints{
+	display: flex;
+}
+
+.bottom-endpoint{
+	width: 19%;
+	height: 18px;
+	background-color: #29e;
+	border-radius: 50%;
+	margin: 0 auto;
+	opacity: 0.5;
+}
+
+
+.left-endpoints{
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+}
+
+.nand3{
+	margin-top: 0.9rem;
+}
+
+.nand4{
+	margin-top: 1rem;
+}
+
+.nand5{
+	margin-top: 0.7rem;
+}
+
+.nand6{
+	margin-top: 0.4rem;
+}
+
+.ni4-top, .ni4-middle, .ni4-bottom, .ni5-top, .ni5-middle, .ni5-bottom, .ni6-top, .ni6-middle, .ni6-bottom{
+	margin-top: 0.1rem;
+}
+
+.endpoint{
+	width: 10px;
+	height: 10px;
+	background-color: #29e;
+	border-radius: 50%;
+	opacity: 0.5;
+}
+
+.demux-endpoint{
+	width: 12px;
+	height: 12px;
+	background-color: #29e;
+	border-radius: 50%;
+	opacity: 0.5;
+}
+
+.top{
+	margin-top: 1.5rem;
+}
+
+.endpoint:hover, .demux-endpoint:hover{
+	cursor: pointer;
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.bottom{
+	margin-top: 0.7rem;
+}
+
+.right{
+	margin-top: 2.25rem;
+	margin-left: 0.8rem;
+}
+
+.ni3-top{
+	margin-top: 0.6rem;
+}
+
+.ni3-middle{
+	margin-top: 0.1rem;
+}
+
+.ni3-bottom{
+	margin-top: 0.1rem;
+}
+
+
+/*------------------ dio ispod diva u kojem se biraju elementi -----------------*/
+
+#main-part > #outer-dropzone {
+  width: 100vw;
+  height: 85vh;
+  background-color: white;
+  margin: 0.3rem;
+  margin-top: 0.2rem;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+#outer-dropzone > #top-container{
+	width: 100%;
+	height: 90%;
+	display: flex;
+}
+/*------------------------- imena varijabli --------------------------*/
+
+#variable-box{
+	display: flex;
+	/*flex-direction: row;*/
+	width: 10%;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#variable-box > .variable-labels{
+	display: flex;
+}
+
+#variable-box > .variable-labels > .variable-name{
+	margin-left:0.5rem;
+	width: 25%;
+}
+
+/* ---------------- linije svake varijable, za svaku 0 i 1 --------------------------*/
+
+.variabla{
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+}
+.box{
+	background-color: transparent;
+	height: 35px;
+	width: 40px;
+	position: relative;
+	margin-top: 0.5rem;
+}
+
+.box-up{
+	display: flex;
+	flex-direction: column;
+}
+
+.extra-variabla{
+	background-image: none;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	height: 40px;
+	width: 40px;
+	margin: 1rem;
+
+}
+
+.points{
+	display: flex;
+	flex-direction: column;
+	margin-left: 2.1rem;
+}
+
+.points-up{
+	margin-left: 0;
+}
+
+.kutija{
+	background-color: white;
+	height: 35px;
+	width: 35px;
+	position: absolute;
+	left: 1%;
+	top: -5%;
+	color: #202628;
+	border: 1px solid #e6e6e6;
+	border-radius: 4px;
+	font-size: 75%;
+	text-align: center;
+	background-image: url("../images/x1.png");
+	background-size: cover;
+}
+
+.neg{
+	background-image: url("../images/x1-neg.png");
+	background-size: cover;
+}
+
+.point{
+	height: 10px;
+	width: 10px;
+	/*background-color: rgb(49, 107, 49);*/
+	background-color: #29e;
+	border-radius: 50%;
+	margin-top: 0.25rem;
+	opacity: 0.9;
+}
+
+.point-up{
+	margin-left: 1rem;
+	margin-top: -0.45rem;
+}
+
+.point:hover{
+	background-color: #f9903b;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.jqSimpleConnect:hover{
+	cursor: pointer;
+}
+
+
+.const{
+	background-image: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	margin: 0.8rem;
+}
+
+.const-connect{
+	left: 73%;
+    top: 15%;
+	position: absolute;
+}
+
+.vcc{
+	border: 1px solid #e6e6e6;
+	background-image: url("../images/const-1.png");
+	height: 30px;
+	width: 30px;
+}
+
+.gnd{
+	border: 1px solid #e6e6e6;
+	background-image: url("../images/const-0.png");
+	height: 30px;
+	width: 30px;
+}
+
+/*-------------- poz i neg varijable za template --------------------*/
+
+.x1-neg{
+	background-image:url("../images/x1-neg.png");
+}
+
+.x2-poz{
+	background-image: url("../images/x2.png");
+}
+
+.x2-neg{
+	background-image: url("../images/x2-neg.png");
+}
+
+.x3-poz{
+	background-image: url("../images/x3.png");
+}
+
+.x3-neg{
+	background-image: url("../images/x3-neg.png");
+}
+
+.x4-poz{
+	background-image: url("../images/x4.png");
+}
+
+.x4-neg{
+	background-image: url("../images/x4-neg.png");
+}
+
+
+/*------------ dio u kojem ce se dropat svi elementi ----------------*/
+
+#drop-zone{
+	width: 85%;
+	height: 100%;
+	background-color: white;
+	margin-right: 0.5rem;
+}
+
+/*----------------- izlazne varijable, i njihovi indikatori -------------------*/
+
+#y-variable{
+	width: 5vw;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	margin-right: 0.5em;
+}
+
+#exit-variables{
+	width: 45%;
+	margin: auto; 
+}
+
+#exit-variables > .exit{
+	width: 15px;
+	height: 15px;
+	/*border: 2px solid #f9903b;*/
+	border: 2px solid #999;
+	background-color: white;
+	margin: 3rem auto;
+}
+
+#exit-variables > .exit:hover{
+	cursor: pointer;
+}
+
+#exit-indicators{
+	width: 45%;
+	margin: auto 0.5em;
+}
+
+#exit-indicators > .exit-sign{
+	width: 32px;
+	height: 32px;
+	display: flex;
+	justify-content: center;
+	margin: 2rem auto;
+}
+
+.exit-sign i{
+	color: #4e4e4e;
+}
+
+/* --------------- donji dio, nalazi se dio za generiranje binarnih brojeva -----------------*/
+
+#bottom-container{
+	width: 100%;
+	height: 10%;
+	background-color: white;
+	margin-top: 0.5rem;
+	display: flex;
+}
+
+#bottom-container > button{
+	height: 35px;
+	margin: auto 1rem;
+	width: 100px;
+	background-color: transparent;
+	font-family: Montserrat;
+	outline: none;
+	color: #ffcc33;
+	box-shadow: 5px 9px 27px 0px #ffcc33;
+	border: 2px solid #ffcc33;
+	margin-left: 5rem;
+	font-weight: 600;
+}
+
+#bottom-container > button:hover{
+	cursor: pointer;
+	background-color: #ffcc33;
+	color: white;
+}
+
+#bottom-container > .variable-sign{
+	background-color: white;
+	width: 24px;
+	height: 20px;
+	margin: auto 1rem;
+	margin-top: 1.5rem;
+	border-bottom: 3px solid #999;
+	text-align: center;
+	color: #4e4e4e;
+	font-weight: 600;
+	font-size: 19px;
+}
+
+/*-------------- drag i drop klase koje dodaju pri dragu i dropu elementa ----------------*/
+
+.drop-active {
+  border-color: #aaa;
+}
+
+.drop-target {
+  background-color: white;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.drag-drop {
+  display: inline-block;
+  min-width: 40px;
+  padding: 2em 0.5em;
+
+  color: #fff;
+  background-color: #29e;
+  border: solid 2px #fff;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+
+  transition: background-color 0.3s;
+}
+
+.drag-drop.can-drop {
+  color: #000;
+  background-color: #4e4;
+}
+
+/* -------------- dodatni dio za hover crte ----------------*/
+  .ui-tooltip {
+    background: #40b789;
+	opacity: 0.8;
+    color: white;
+	width: 100px;
+	height: 20px;
+	padding: 8px 10px;
+	box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.5);
+	bottom: 100%;
+	overflow: hidden;
+  }
+  
+  .notification {
+    display: inline-block;
+    font-size: 2em;
+    padding: .5em;
+    box-shadow: 2px 2px 5px -2px rgba(0,0,0,0.5);
+  }
+  
+  .jqSimpleConnect{
+	  position: absolute;
+  }
+  
+  .ui-tooltip-content{
+	  font-family: Montserrat;
+	  font-size: 13px;
+	  text-align: center;
+  }
+  
+  /*Mobitel 768px 1090px tablet vise od toga desktop*/ 
+ @media screen and (max-width:768px) {
+	.dropdown-icon{
+		display: flex !important;
+		width: 40px;
+		border-bottom: none;
+		border-left: none;
+	}
+	
+	.dropdown-icon i{
+		color: #4a4a4a;
+	}
+	.izbor, .blokovi, .help{
+		display: none;
+	}
+	
+	#main-part{
+	}
+	
+	#redovi-divova{
+		width: 40px;
+		z-index: 2;
+	}
+	
+	#outer-dropzone{
+		width: 100vw;
+	}
+  }
+  
+  .responsive-show{
+	  display: flex;
+	  z-index: 10;
+	  width: 100px;
+  }
+  
+  /*-------------- Side-content -------------*/
+  
+  #side-content{
+	  position: absolute;
+	  display: flex;
+	  height: 35px;
+	  background-color: #f9f7f4; 
+	  right: 0%;
+  }
+  
+  #side-content:hover{
+	  cursor: pointer;
+  }
+  
+  .show-icon{
+	  background-color: #ffcc33;
+	  border-bottom-left-radius: 4px;
+	  border-top-left-radius: 4px;
+	  width: 28px;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+  }
+  
+  .show-icon i{
+	  color: white;
+  }
+  
+  .show-icon i:hover{
+	  cursor: pointer;
+  }
+  
+  
+  .edit-icons{
+	  display: flex;
+	  width: 120px;
+	  justify-content: center;
+	  align-items: center;
+  }
+  
+  .edit-icons i:hover{
+	  cursor: pointer;
+  }
+  
+  .fa-floppy-o:hover{
+	  color: #29e;
+  }
+  
+  .fa-floppy-o, .fa-upload{
+	  margin-left: 1rem;
+	  color: #4e4e4e;
+  }
+  
+  .fa-trash{
+	  color: #4e4e4e;
+  }
+  
+  .fa-trash:hover{
+	  color: #f9903b;
+  }
+  
+  .fa-upload:hover{
+	  color: #ffcc33;
+  }
+  
+  /*---- dodatne strelice -----*/
+  
+  .fa-chevron-down, .fa-chevron-up{
+	  margin-top: 1rem;
+	  align-self: center;
+	  color: #4e4e4e;
+  }
+  
+  .fa-chevron-down:hover{
+	  cursor: pointer;
+  }
+  
+  .fa-chevron-up:hover{
+	  cursor: pointer;
+  }
+
+  /* ------ mux-variables ---------*/
+
+  .mux-variables{
+	  width: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+  }
+
+  .variabla-mux{
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	margin-left: 3rem;
+  }
+
