@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Examples</title>
+        <link rel="stylesheet" href="styles/font-awesome.min.css"/> 
+		<link href="styles/examples.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body id="body-style">
+        <!--<div id="menu">
+            <nav>
+                <div class="menu-choice"><a href="index-naslovna.html">NASLOVNA</a></div>
+                <div class="menu-choice"><a href="theory.html">THEORY</a></div>
+                <div class="menu-choice selected-menu"><a href="#">PRIMJERI</a></div>
+                <div class="menu-choice"><a href="main.html">SIMULATION</a></div>
+            </nav>
+	    </div>-->
+        <nav class="navbar navbar-inverse" id="menu">
+            <div class="container-fluid" id="choices">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle bars" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#"><strong>E</strong>lectronics <strong>E</strong>xplained</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index-naslovna.html">Home</a></li>
+                    <li class="active"><a href="#">Examples</a></li>
+                    <li><a href="theory.html">Theory</a></li>
+                    <li><a href="main.html">Simulation</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+        <div class="bellow-menu">
+            <div class="introduction-text">
+                <h1>Examples of logic gate <br><strong>solved exercises</strong></h1>
+                <p>Not sure how to display a Boolean function using logic gates? Use the examples down bellow for a quick remainder.</p>
+                <i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="example">
+            <div class="example-container">
+                <h1><strong>NAND</strong> gate</h1>
+                <h3>
+                    <div class="number">1.</div> 
+                    <p>Using NAND gates, realize minimum circuit for a function given with PDNO: f (x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>4</sub>) = V (R<sub>0</sub>, R<sub>1</sub>, 2, 3, 5, 7, R<sub>8</sub>, 11, R<sub>12</sub>, 13).</p> 
+                </h3>
+                <div class="solution">
+                    <table id="nand-table" class="table-responsive">
+                        
+                    </table>
+                    <div class="algebar-solution">
+                        <div class="veich">
+                            <div class="veich-image">
+                                <img id="veich-image-switch" class="img-responsive" src="images/veich-empty.png"/>
+                            </div>
+                            <div class="buttons">
+                                <button class="nand-button final-step">FINAL</button>
+                                <button class="nand-button button-click-nand">NEXT STEP</button>
+                            </div>
+                        </div>
+                        <div class="algebar-function">
+                            <p id="algebar">y = <strong>x<sub>1</sub></strong>&<strong>x<sub>2</sub></strong> V x<sub>3</sub>&x<sub>4</sub> V x<sub>2</sub>&x<sub>4</sub></p>
+                            <p class="overline-nand">y = <em><strong>x<sub>1</sub></strong>&<strong>x<sub>2</sub></strong> V x<sub>3</sub>&x<sub>4</sub> V x<sub>2</sub>&x<sub>4</sub></em></p>
+                            <div class="de-morgan-nand">
+                                <p>Using De Morgan</p>
+                                <div class="de-morgan-formula">
+                                    <p class="first">x<sub>1</sub>Vx<sub>2</sub></p>
+                                    <i class="fa fa-arrows-h" aria-hidden="true"></i>
+                                    <p><strong>x<sub>1</sub></strong>&<strong>x<sub>2</sub></strong></p>
+                                </div>
+                            </div>
+                            <p id="de-morgan-algebar">y = <i><em><strong>x<sub>1</sub></strong>&<strong>x<sub>2</sub></strong></em> & <em>x<sub>3</sub>&x<sub>4</sub></em> & <em>x<sub>2</sub>&x<sub>4</sub></em></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="example-2">
+            <div class="example-container">
+                <h1><strong>NOR</strong> gate</h1>
+                <h3>
+                    <div class="number">2.</div> 
+                    <p>Using NOR gates, realize minimum circuit for a function given with PKNO: f (x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>4</sub>) = & (R<sub>4</sub>, R<sub>5</sub>, R<sub>6</sub>, 7, 10, 11, 12, 13, 14, 15).</p> 
+                </h3>
+                <div class="solution">
+                    <table id="nor-table">
+                        
+                    </table>
+                    <div class="algebar-solution">
+                        <div class="veich-nor">
+                            <div class="veich-nor-image">
+                                <img id="veich-nor-image-switch" src="images/veich-empty.png"/>
+                            </div>
+                            <div class="buttons">
+                                <button class="nor-button final-step-nor">FINAL</button>
+                                <button class="nor-button button-click-nor">NEXT STEP</button>
+                            </div>
+                        </div>
+                        <div class="algebar-function">
+                            <p id="algebar-nor"><strong>y</strong> = x<sub>1</sub>&x<sub>3</sub> V x<sub>2</sub></p>
+                            <p id="conjuction-nor"><strong>y</strong> = <strong>x<sub>1</sub>&x<sub>3</sub></strong> V x<sub>2</sub></p>
+                            <div class="de-morgan">
+                                <p>Using De Morgan</p>
+                                <div class="de-morgan-formula">
+                                    <p class="first">x<sub>1</sub>Vx<sub>2</sub></p>
+                                    <i class="fa fa-arrows-h" aria-hidden="true"></i>
+                                    <p><strong>x<sub>1</sub></strong>&<strong>x<sub>2</sub></strong></p>
+                                </div>
+                            </div>
+                            <p class="overline-nor overline-nor-one"><em><strong>y</strong></em> = <i><em><strong>x<sub>1</sub></strong>V<strong>x<sub>3</sub></strong></em> V x<sub>2</sub></i></p>
+                            <p class="overline-nor overline-nor-final">y = <i><em><strong>x<sub>1</sub></strong>V<strong>x<sub>3</sub></strong></em> V x<sub>2</sub></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="example-3">
+            <div class="example-container">
+                <h1><strong>Multiplexer</strong></h1>
+                <h3>
+                    <div class="number">3.</div> 
+                    <p>Realize function given with PDNO: f (x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>) = V (0, 2, 3, 4) using multiplexer with two address inputs (m=2).</p> 
+                </h3>
+                <div class="solution">
+                    <table id="mux-table">
+                        
+                    </table>
+                    <div class="algebar-solution">
+                        <div class="veich-mux">
+                            <div class="veich-mux-image">
+                                <img id="veich-mux-image-switch" src="images/veich-mux.png"/>
+                            </div>
+                            <div class="buttons">
+                                <button class="nor-button final-step-mux">FINAL</button>
+                                <button class="nor-button button-click-mux">NEXT STEP</button>
+                            </div>
+                        </div>
+                        <div class="mux-solution">
+                            <img src="images/mux-solution.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="example-4">
+            <div class="example-container">
+                <h1><strong>Demultiplexer</strong></h1>
+                <h3>
+                    <div class="number">4.</div> 
+                    <p>Realize function given with PDNO: f (x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>) = V (2, 3, 4, 5) using demultiplexer with two address inputs (m=2).</p> 
+                </h3>
+                <div class="solution">
+                    <table id="demux-table">
+                        
+                    </table>
+                    <div class="algebar-solution">
+                        <div class="veich-demux">
+                            <div class="veich-demux-image">
+                                <img id="veich-demux-image-switch" src="images/veich-mux.png"/>
+                            </div>
+                            <div class="buttons">
+                                <button class="nor-button final-step-demux">FINAL</button>
+                                <button class="nor-button button-click-demux">NEXT STEP</button>
+                            </div>
+                        </div>
+                        <div class="demux-solution">
+                            <img src="images/demux-solution.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row footer-row">
+                <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12 column-footer">
+                    <ul class="social">
+                        <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+                        <li id="youtube"> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+                    </ul>
+                    <ul class="links">
+                        <li> <a href="#"> Home |</a> </li>
+                        <li> <a href="#"> Examples |</a> </li>
+                        <li> <a href="#"> Theory |</a> </li>
+                        <li> <a href="#"> Simulation </a> </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12 ">
+                    <h3> Get in touch </h3>
+                    <ul>
+                        <li>
+                            <div class="input-append newsletter-box text-center">
+                                <input type="text" class="input-email full text-center" placeholder="Email">
+                                <i class="fa fa-times-circle fa-2x validate-icon" aria-hidden="true"></i>
+                                <i class="fa fa-check-circle fa-2x validate-icon" aria-hidden="true"></i>
+                                <button class="button-submit btn  bg-gray" type="button"> Submit <i class="fa fa-long-arrow-right"> </i> </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!--/.footer-->
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-center"> Copyright © Vana Brajčić 2017. All right reserved. </p>
+        </div>
+    </div>
+    <!--/.footer-bottom--> 
+</footer>
+
+    </body>
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/table.js"></script>
+    <script src="scripts/return-to-top.js"></script>
+    <script src="scripts/email.js"></script>
+</html>

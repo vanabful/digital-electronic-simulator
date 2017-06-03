@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Proba-završni</title>
+		<link rel="stylesheet" href="styles/font-awesome.min.css"/>
+		<link href="styles/main-css.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+
+		
+	</head>
+	
+	<body>
+	
+	<div id="menu">
+		<nav>
+			<div class="menu-choice"><a href="index-naslovna.html">NASLOVNA</a></div>
+			<div class="menu-choice"><a href="theory.html">THEORY</a></div>
+			<div class="menu-choice"><a href="examples.html">PRIMJERI</a></div>
+			<div class="menu-choice"><a href="#">SIMULATION</a></div>
+		</nav>
+	</div>
+		
+		<div id="main-part">
+			
+			<div id="redovi-divova">
+				<div class="izbori">
+					<div class="izbor-icon dropdown-icon"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
+					<div class="izbor"><label>Tutorial</label></div>
+					<div class="izbor log-vrata"><label>Logička vrata</label></div>
+						<div class="izbor dropdown log ni"><label>NI vrata</label></div>
+						<div class="izbor dropdown log nili"><label>NILI vrata</label></div>
+					<div class="izbor mux"><label>Multiplekseri</label></div>
+					<div class="izbor demux"><label>Demultiplekseri</label></div>
+					<div class="izbor konst"><label>Konstante</label></div>
+					<div class="izbor extra-sklopovi"><label>Dodatni sklopovi</label></div>
+					<div class="izbor extra-v"><label>Dodatne varijable</label></div>
+						<div class="izbor dropdown extra-var extra-v1"><label>x1</label></div>
+						<div class="izbor dropdown extra-var extra-v2"><label>x2</label></div>
+						<div class="izbor dropdown extra-var extra-v3"><label>x3</label></div>
+						<div class="izbor dropdown extra-var extra-v4"><label>x4</label></div>
+				</div>
+				<div class="blokovi">
+					
+				</div>
+				<div class="help">
+					<a href=""> + Need help? </a>
+				</div>
+			</div>
+			
+			<div id="outer-dropzone">
+				<div id="top-container">
+					<div id="side-content">
+						<div class="show-icon">
+							<i class="fa fa-angle-double-left" aria-hidden="true"></i>
+							<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+						</div>
+						<div class="edit-icons">
+							<i class="fa fa-trash" aria-hidden="true"></i>
+							<i class="fa fa-floppy-o" aria-hidden="true"></i>
+							<i class="fa fa-upload" aria-hidden="true"></i>
+						</div>
+					</div>
+					<div id="variable-box">
+						<div class="variabla">
+							<div class="box x1">
+								<div class="points">
+									<div class="point connect1 pozitivan"></div>
+									<div class="point connect1 pozitivan"></div>
+								</div>
+								<div class="kutija"></div>
+							</div>
+							<div class="box x1">
+								<div class="points">
+									<div class="point negiran connect1"></div>
+									<div class="point negiran connect1"></div>
+								</div>
+								<div class="kutija" style="background-image:url('images/x1-neg.png');"></div>
+							</div>
+						</div>
+						
+						<div class="variabla">
+							<div class="box x2">
+								<div class="points">
+									<div class="point connect1 pozitivan"></div>
+									<div class="point connect1 pozitivan"></div>
+								</div>
+								<div class="kutija" style="background-image:url('images/x2.png');"></div>
+							</div>
+							<div class="box x2">
+								<div class="points">
+									<div class="point negiran connect1"></div>
+									<div class="point negiran connect1"></div>
+								</div>
+								<div class="kutija" style="background-image:url('images/x2-neg.png');"></div>
+							</div>
+						</div>
+						
+						<div class="variabla">
+							<div class="box x3 x3-hide">
+								<div class="points">
+									<div class="point connect1 pozitivan"></div>
+									<div class="point connect1 pozitivan"></div>
+								</div>
+								<div class="kutija" style="background-image:url('images/x3.png');"></div>
+							</div>
+							<div class="box x3 x3-hide">
+								<div class="points">
+									<div class="point negiran connect1"></div>
+									<div class="point negiran connect1"></div>
+								</div>
+								<div class="kutija" style="background-image:url('images/x3-neg.png');"></div>
+							</div>
+						</div>
+						
+						<div class="variabla">
+							<div class="box x4 x4-hide">
+								<div class="points">
+									<div class="point connect1 pozitivan"></div>
+									<div class="point connect1 pozitivan"></div>
+								</div>
+								<div class="kutija" style="background-image:url('images/x4.png');"></div>
+							</div>
+							<div class="box x4 x4-hide">
+								<div class="points">
+									<div class="point negiran connect1"></div>
+									<div class="point negiran connect1"></div>
+								</div>
+								<div class="kutija" style="background-image:url('images/x4-neg.png');"></div>
+							</div>
+						</div>
+						
+						<i class="fa fa-chevron-down" aria-hidden="true"></i>
+						<i class="fa fa-chevron-up" aria-hidden="true"></i>
+					</div>
+					<div id="drop-zone" class="dropzone">
+					</div>
+					<div id="y-variable">
+						<div id="exit-variables">
+							<div id="y1" class="exit connect1"></div>
+							<div id="y2" class="exit connect1"></div>
+							<div id="y3" class="exit connect1"></div>
+							<div id="y4" class="exit connect1"></div>
+						</div>
+						<div id="exit-indicators">
+							<div id="y1-ind" class="exit-sign"><i class="fa fa-lightbulb-o fa-2x" aria-hidden="true"></i></div>
+							<div id="y2-ind" class="exit-sign"><i class="fa fa-lightbulb-o fa-2x" aria-hidden="true"></i></div>
+							<div id="y3-ind" class="exit-sign"><i class="fa fa-lightbulb-o fa-2x" aria-hidden="true"></i></div>
+							<div id="y4-ind" class="exit-sign"><i class="fa fa-lightbulb-o fa-2x" aria-hidden="true"></i></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="mux-variables">
+
+					<div class="variabla-mux">
+						<div class="box mux-x1 x1">
+							<div class="points points-up">
+								<div class="point connect1 pozitivan point-up"></div>
+							</div>
+							<div class="kutija" style="background-image:url('images/x1.png');"></div>
+						</div>
+					</div>
+
+					<div class="variabla-mux">
+						<div class="box mux-x2 x2">
+							<div class="points points-up">
+								<div class="point connect1 pozitivan point-up"></div>
+							</div>
+							<div class="kutija" style="background-image:url('images/x2.png');"></div>
+						</div>
+					</div>
+
+					<div class="variabla-mux">
+						<div class="box mux-x3 x3">
+							<div class="points points-up">
+								<div class="point connect1 pozitivan point-up"></div>
+							</div>
+							<div class="kutija" style="background-image:url('images/x3.png');"></div>
+						</div>
+					</div>
+
+					<div class="variabla-mux">
+						<div class="box mux-x4 x4">
+							<div class="points points-up">
+								<div class="point connect1 pozitivan point-up"></div>
+							</div>
+							<div class="kutija" style="background-image:url('images/x4.png');"></div>
+						</div>
+					</div>
+				</div>
+
+				<div id="bottom-container">
+					<button id="generate">Generiraj</button>
+					<div id="x1-num" class="variable-sign"></div>
+					<div id="x2-num" class="variable-sign"></div>
+					<div id="x3-num" class="variable-sign"></div>
+					<div id="x4-num" class="variable-sign"></div>
+				</div>
+			</div>
+		</div>
+		
+		
+	<script src="scripts/jquery-3.1.1.min.js"></script>
+	<script src="scripts/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="scripts/jsplumb.js"></script>
+	<script src="scripts/connections.js"></script>
+	<script src="scripts/template.js"></script>
+	<script src="scripts/demux.js"></script>
+	<script src="scripts/gener-bin.js"></script>
+	<script src="scripts/dropdown-menu.js"></script>
+	<script src="scripts/ni-nili-vrata.js"></script>
+	<script src="scripts/mux-demux.js"></script>
+	<script src="scripts/binarni.js"></script>
+	</body>
+	
+	
+</html>

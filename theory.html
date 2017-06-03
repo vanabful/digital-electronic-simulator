@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Theory</title>
+        <link rel="stylesheet" href="styles/font-awesome.min.css"/>
+		<link href="styles/theory.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body id="body-style">
+        <!--<div id="menu">
+            <nav>
+                <div class="menu-choice"><a href="index-naslovna.html">NASLOVNA</a></div>
+                <div class="menu-choice selected-menu"><a href="#">THEORY</a></div>
+                <div class="menu-choice"><a href="examples.html">PRIMJERI</a></div>
+                <div class="menu-choice"><a href="main.html">SIMULATION</a></div>
+            </nav>
+	    </div>-->
+
+        <nav class="navbar navbar-inverse" id="menu">
+            <div class="container-fluid" id="choices">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle bars" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#"><strong>E</strong>lectronics <strong>E</strong>xplained</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index-naslovna.html">Home</a></li>
+                    <li><a href="examples.html">Examples</a></li>
+                    <li class="active"><a href="#">Theory</a></li>
+                    <li><a href="main.html">Simulation</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+        <div class="bellow-menu">
+            <div class="introduction-text">
+                <h1><strong>Everything</strong> you need to know about<br> logic gates <strong>is here</strong></h1>
+                <p>Here you can learn the basics of logic gates. We advise you to take a look at this before starting the simulator, if you are a begginer.<br> Use this list down bellow for a quick navigation.</p>
+                <ul>
+                     <li><div class="icon"></div><a href="#nand">NAND gate</a></li>
+                     <li><div class="icon"></div><a href="#nor">NOR gate</a></li>
+                     <li><div class="icon"></div><a href="#inverter">Inverter</a></li>
+                     <li><div class="icon"></div><a href="#multiplexer">Multiplexer</a></li>
+                     <li><div class="icon"></div><a href="#demultiplexer">Demultiplexer</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nand-gate">
+            <div class="elements-container">
+                <h1 id="nand"><strong>NAND</strong> gate</h1>
+                <div class="bellow-heading">
+                    <div class="table-picture">
+                        <div class="picture-table">
+                            <div class="logic-gate-image">
+                                <img src="images/nand-example.png"/>
+                            </div>
+                            <table>
+                            <tr>
+                                <th>x<sub>1</sub></th>
+                                <th>x<sub>2</sub></th>
+                                <th>Output Q</th>
+                            </tr>
+
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                        </div>
+
+                        <div class="logic-gate-formula">
+                            <p>Q = <b>NOT</b> (x<sub>1</sub> <b>AND</b> x<sub>2</sub>)</p> 
+                            <i class="fa fa-arrows-h fa-2x" aria-hidden="true"></i>
+                            <p>Q = <strong>x<sub>1</sub> & x<sub>2</sub></strong></p>
+                        </div>
+                    </div>
+
+                    <div class="logic-gate-paragraph">
+                        <p>
+                            In digital electronics, a NAND gate (negative-AND) is a logic gate which produces an output which is false only if all its inputs are true; thus its output is complement to that of the AND gate.
+                             It is made using transistors and junction diodes. The NAND gate is significant because any boolean function can be implemented by using a combination of NAND gates. This property is called functional completeness. It shares this property with the NOR gate.
+                             The NAND gate has the property of functional completeness. That is, any other logic function (AND, OR, etc.) can be implemented using only NAND gates. An entire processor can be created using NAND gates alone.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nor-gate">
+            <div class="elements-container">
+                <h1 id="nor"><strong>NOR</strong> gate</h1>
+                <div class="bellow-heading">
+                    <div class="table-picture">
+                        <div class="picture-table">
+                            <div class="logic-gate-image">
+                                <img src="images/nor-example.png"/>
+                            </div>
+                            <table>
+                            <tr>
+                                <th>x<sub>1</sub></th>
+                                <th>x<sub>2</sub></th>
+                                <th>Output Q</th>
+                            </tr>
+
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                        </div>
+
+                        <div class="logic-gate-formula">
+                            <p>Q = <b>NOT</b> (x<sub>1</sub> <b>OR</b> x<sub>2</sub>)</p> 
+                            <i class="fa fa-arrows-h fa-2x" aria-hidden="true"></i>
+                            <p>Q = <strong>x<sub>1</sub> v x<sub>2</sub></strong></p>
+                        </div>
+                    </div>
+
+                    <div class="logic-gate-paragraph">
+                        <p>
+                            The NOR gate is a digital logic gate that implements logical NOR. NOR is the result of the negation of the OR operator. It can also be seen as an AND gate with all the inputs inverted. NOR is a functionally complete operation—NOR gates can be combined to generate any other logical function. it shares this property with the NAND gate. 
+                            By contrast, the OR operator is monotonic as it can only change LOW to HIGH but not vice versa. NOR Gates are basic logic gates, and as such they are recognised in TTL and CMOS ICs. 
+                            If no specific NOR gates are available, one can be made from NAND gates, because NAND and NOR gates are considered the "universal gates", meaning that they can be used to make all the other gates.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="invertor">
+            <div class="elements-container">
+                <h1 id="inverter"><strong>Inverter</strong></h1>
+                <div class="bellow-heading">
+                    <div class="table-picture">
+                        <div class="picture-table">
+                            <div class="logic-gate-image">
+                                <img src="images/not-example.png"/>
+                            </div>
+                            <table>
+                            <tr>
+                                <th>x<sub>1</sub></th>
+                                <th>Output Q</th>
+                            </tr>
+
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                        </div>
+
+                        <div class="logic-gate-formula">
+                            <p>Q = <b>NOT</b> (x<sub>1</sub>)</p> 
+                            <i class="fa fa-arrows-h fa-2x" aria-hidden="true"></i>
+                            <p>Q = <strong>x<sub>1</sub></strong></p>
+                        </div>
+                    </div>
+
+                    <div class="logic-gate-paragraph">
+                        <p>
+                            In digital logic, an inverter or NOT gate is a logic gate which implements logical negation. An inverter circuit outputs a voltage representing the opposite logic-level to its input. Its main function is to invert the input signal applied.
+                            Digital electronics circuits operate at fixed voltage levels corresponding to a logical 0 or 1. An inverter circuit serves as the basic logic gate to swap between those two voltage levels.
+                            The inverter is a basic building block in digital electronics. Multiplexers, decoders, state machines, and other sophisticated digital devices may use inverters.
+                            If no specific NOT gates are available, one can be made from NAND or NOR gates, because NAND and NOR gates are considered the "universal gates", meaning that they can be used to make all the others.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="multiplexer" class="multiplexer">
+            <div class="elements-container">
+                <h1><strong>Multiplexer</strong></h1>
+                <div class="bellow-heading">
+                    <div class="mux-picture">
+                        <img src="images/mux-teorija.png">
+                    </div>
+
+                    <div class="logic-gate-paragraph">
+                        <p>
+                            Multiplexer is a functional circuit that has:<br>
+                            <ul>
+                                <li>m address inputs, a<sub>m-1</sub>, ... , a<sub>1</sub>, a<sub>0</sub></li>
+                                <li>n=2<sup>m</sup> information inputs, u<sub>n-1</sub>, ... , u<sub>1</sub>, u<sub>0</sub></li>
+                                <li>1 information output, i</li>
+                                <li>control input k</li>
+                            </ul>
+                            <p>Multiplexer is a logical circuit that has a function to switch one of several inputs through one output line by the application of a control signal.
+                                It can be used as a selector or for parallel to serial conversion. In digital electronics, multiplexers are known as selectors.
+                            </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+               <div class="two-1mux">
+                    <div class="two-1mux-heading">
+                        <h2><strong>2 to 1</strong> multiplexer</h2>
+                    </div>
+                    <div class="two-1-container">
+                        <div class="two-1-images">
+                            <div class="two-1mux-nand">
+                                <img src="images/2-1mux.png"/>
+                            </div>
+                            <div class="table-selector">
+                                <div class="two-1selector">
+                                    <img src="images/2-1selector.png"/>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <th>a<sub>0</sub></th>
+                                        <th>Output i</th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>0</td>
+                                        <td>u<sub>0</sub></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>1</td>
+                                        <td>u<sub>1</sub></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="two-1-text">
+                            <p> In 2 to 1 line multiplexer, address input a<sub>0</sub> decides whitch input (u<sub>0</sub>, u<sub>1</sub>) gets passed to the output i. 
+                                If a<sub>0</sub> is LOW at logic 0, it passes the data from input u<sub>0</sub> to the output, while input u<sub>1</sub> is blocked.
+                                When it is HIGH at logic 1, the reverse happens. We can describe it with the following Boolean expression:
+                            </p>
+                            <div class="two-1formula">
+                                <p><strong>i = <em>a<sub>0</sub></em>u<sub>1</sub>  +  a<sub>0</sub>u<sub>0</sub></strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="two-1mux">
+                    <div class="two-1mux-heading">
+                        <h2><strong>4 to 1</strong> multiplexer</h2>
+                    </div>
+                    <div class="two-1-container">
+                        <div class="four-1-images">
+                            <div class="four-1mux-nand">
+                                <img src="images/4-1mux.png"/>
+                            </div>
+                        </div>
+
+                        <div class="two-1-text">
+                            <p> In 4 to 1 line multiplexer, addressing inputs a<sub>0</sub> and a<sub>1</sub> decide whitch switch from u<sub>0</sub> to u<sub>3</sub> is closed, 
+                                thus transfering its data to the output. At any one instant in time, only one switch is closed.
+                                We can describe it with the following Boolean expression:
+                            </p>
+                            <div class="two-1formula">
+                                <p><strong>i = <em>a<sub>0</sub></em><em>a<sub>1</sub></em>u<sub>0</sub> + <em>a<sub>1</sub></em>a<sub>0</sub>u<sub>1</sub> + a<sub>0</sub><em>a<sub>1</sub></em>u<sub>2</sub> + a<sub>0</sub>a<sub>1</sub>u<sub>3</sub></strong></p>
+                            </div>
+                            <div class="four-one-switch">
+                                <img src="images/4-1mux-choice.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div id="demultiplexer" class="demultiplexer multiplexer">
+            <div class="elements-container">
+                <h1><strong>Demultiplexer</strong></h1>
+                <div class="bellow-heading">
+                    <div class="mux-picture">
+                        <img src="images/demux-teorija.png">
+                    </div>
+
+                    <div class="logic-gate-paragraph">
+                        <p>
+                            Demultiplexer is a functional circuit that has:<br>
+                            <ul>
+                                <li>m address inputs, a<sub>m-1</sub>, ... , a<sub>1</sub>, a<sub>0</sub></li>
+                                <li>n=2<sup>m</sup> information outputs, i<sub>n-1</sub>, ... , i<sub>1</sub>, i<sub>0</sub></li>
+                                <li>1 information input, i</li>
+                                <li>control input k</li>
+                            </ul>
+                            <p>Demultiplexer is a logical circuit that has a function to switch one of several inputs through one output line by the application of a control signal.
+                                It can be used as a selector or for parallel to serial conversion. In digital electronics, multiplexers are known as selectors.
+                            </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                <div class="two-1mux">
+                    <div class="two-1mux-heading four-demux">
+                        <h2><strong>4 channel</strong> demultiplexer</h2>
+                    </div>
+                    <div class="two-1-container">
+                        <div class="four-1-images">
+                            <div class="four-1mux-nand">
+                                <img src="images/4-1demux.png"/>
+                            </div>
+                        </div>
+
+                        <div class="two-1-text">
+                            <p> In 4 to 1 line multiplexer, addressing inputs a<sub>0</sub> and a<sub>1</sub> decide whitch switch from u<sub>0</sub> to u<sub>3</sub> is closed, 
+                                thus transfering its data to the output. At any one instant in time, only one switch is closed.
+                                We can describe it with the following Boolean expression:
+                            </p>
+                            <div id="demux-strong" class="two-1formula">
+                                <p><strong>i<sub>0</sub> = <em>a<sub>0</sub></em><em>a<sub>1</sub></em>u <br/> i<sub>1</sub> = <em>a<sub>1</sub></em>a<sub>0</sub>u <br/> i<sub>2</sub> = a<sub>1</sub><em>a<sub>0</sub></em>u <br/> i<sub>3</sub> = a<sub>0</sub>a<sub>1</sub>u</strong></p>
+                            </div>
+                            <div class="four-one-switch">
+                                <img src="images/4-1mux-choice-demux.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row footer-row">
+                <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12 column-footer">
+                    <ul class="social">
+                        <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+                        <li id="youtube"> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+                    </ul>
+                    <ul class="links">
+                        <li> <a href="#"> Home |</a> </li>
+                        <li> <a href="#"> Examples |</a> </li>
+                        <li> <a href="#"> Theory |</a> </li>
+                        <li> <a href="#"> Simulation </a> </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12">
+                    <h3> Get in touch </h3>
+                    <ul>
+                        <li>
+                            <div class="input-append newsletter-box text-center">
+                                <input type="text" class="full text-center" placeholder="Email ">
+                                <button class="btn  bg-gray" type="button"> Submit <i class="fa fa-long-arrow-right"> </i> </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!--/.footer-->
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-center"> Copyright © Vana Brajčić 2017. All right reserved. </p>
+        </div>
+    </div>
+    <!--/.footer-bottom--> 
+</footer>
+
+    </body>
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/return-to-top.js"></script>
+</html>

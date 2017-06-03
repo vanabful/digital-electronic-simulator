@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Naslovna</title>
+        <link href="styles/theory-css.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">  
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>      
+    </head>
+
+    <body id="body-style">
+        <!--<div id="menu">
+            <nav>
+                <div class="menu-choice selected-menu"><a href="#">NASLOVNA</a></div>
+                <div class="menu-choice"><a href="theory.html">THEORY</a></div>
+                <div class="menu-choice"><a href="examples.html">PRIMJER</a></div>
+                <div class="menu-choice"><a href="main.html">SIMULATION</a></div>
+            </nav>
+	    </div>-->
+
+        <nav class="navbar navbar-inverse" id="menu">
+            <div class="container-fluid" id="choices">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle bars" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#"><strong>E</strong>lectronics <strong>E</strong>xplained</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="examples.html">Examples</a></li>
+                    <li><a href="theory.html">Theory</a></li>
+                    <li><a href="main.html">Simulation</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="bellow-menu">     
+            <div class="main-part">
+                <div class="left-image">
+                    <img src="images/brain.png"/>
+                </div>
+                <div class="right-side">
+                    <h1>Logical gates made <strong>easy</strong></h1>
+                    <h2>Always wanted to know how logical gates work? Click the button bellow and <strong>find out!</strong></h2>
+                    <button><a href="main.html">Start simulation</a></button>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <script>
+            $(".right-side button").hover(function(){
+                $(".right-side button a").css("color", "white");
+                $(this).css("background-color", "#ffcc33");
+            });
+        </script>
+    </body>
+</html>
