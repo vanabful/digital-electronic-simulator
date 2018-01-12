@@ -4,4 +4,4 @@ Simulator for elements of digital electronics (NAND, NOR gates, multiplexer and 
 ## Demo
 
 ![home](https://github.com/vanabful/digital-electronic-simulator/blob/master/images/demo-home.PNG)
-![simulation](https://github.com/vanabful/digital-electronic-simulator/tree/master/images/demo-simulation.PNG)
+![simulation](https://github.com/vanabful/digital-electronic-simulator/blob/master/images/demo-simulation.PNG)
